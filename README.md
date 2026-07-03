@@ -1,156 +1,412 @@
-examAIR – AI-Powered OMR Evaluation System 📝🤖
+# 📝 ExamAIR – AI-Based Digital OMR Examination Evaluation System
 
-examAIR is an AI-powered OMR (Optical Mark Recognition) evaluation system developed to automate answer sheet analysis and result generation.
-The project combines Computer Vision, OpenCV, and Deep Learning techniques to detect, process, and evaluate OMR sheets accurately.
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Django](https://img.shields.io/badge/Django-Framework-darkgreen?logo=django)
+![Flutter](https://img.shields.io/badge/Flutter-Mobile-blue?logo=flutter)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-AI-orange?logo=tensorflow)
+![OpenCV](https://img.shields.io/badge/OpenCV-ComputerVision-red?logo=opencv)
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue?logo=mysql)
 
-📌 Project Overview
+## 📖 Overview
 
-  The system is designed to:
-  
-  Upload and preprocess OMR sheets
-  
-  Detect answer regions automatically
-  
-  Identify marked bubbles
-  
-  Predict answers using AI/ML models
-  
-  Generate evaluation results efficiently
+**ExamAIR** is an AI-powered Digital OMR Examination Evaluation System developed as my **Master of Computer Applications (MCA) Final Semester Major Project**.
 
+The project automates the complete offline examination evaluation process using **Artificial Intelligence, Computer Vision, Django, Flutter, and MySQL**.
 
-examAIR aims to reduce manual correction effort and improve accuracy in examination systems.
+Unlike traditional OMR systems, ExamAIR provides an end-to-end solution where administrators can manage examinations through a web application, while evaluators use a Flutter mobile application to scan OMR sheets for automatic evaluation.
 
-🚀 Features
+---
 
-  📄 OMR Sheet Upload
-  
-  🖼️ Image Preprocessing & Alignment
-  
-  🔍 Bubble Detection using OpenCV
-  
-  🤖 AI-Based Bubble Classification
-  
-  ✅ Automatic Answer Evaluation
-  
-  📊 Result Processing
-  
-  ⚡ Fast and Accurate Prediction
+# 🎯 Objectives
 
-🛠 Technologies Used
+- Automate offline examination evaluation.
+- Eliminate manual OMR correction.
+- Reduce human errors.
+- Improve evaluation speed and accuracy.
+- Provide centralized examination management.
+- Generate instant results using AI.
 
-  Programming Language
-  
-  Python
-  
-  Computer Vision & AI
-  
-  OpenCV
-  
-  TensorFlow / Keras
-  
-  CNN (Convolutional Neural Network)
+---
 
-Libraries
+# 🚀 Key Features
 
-  NumPy
-  
-  Pandas
-  
-  Matplotlib
+## 👨‍💼 Admin Web Application
 
-Development Tools
-  
-  Jupyter Notebook
-  
-  VS Code
+- User Authentication
+- Institution Management
+- Employee Management
+- Evaluator Management
+- Exam Creation
+- Question Management
+- Answer Key Upload
+- Candidate Management
+- OMR Template Management
+- Evaluation Monitoring
+- Result Management
+- Reports & Analytics
 
-⚙️ Workflow
+---
 
-  Upload OMR sheet image
-  
-  Preprocess and align image
-  
-  Detect answer regions
-  
-  Extract bubbles using OpenCV
-  
-  Classify marked answers using CNN
-  
-  Evaluate answers and generate results
+## 📱 Evaluator Mobile Application
 
-📂 Project Modules
+A Flutter-based mobile application developed for evaluators.
 
-  🖼️ Image Processing
+Features include:
 
-    Noise reduction
-    
-    Thresholding
-    
-    Perspective correction
-    
-    Auto alignment
+- Secure Login
+- View Assigned Exams
+- Scan OMR Sheets
+- Upload OMR Images
+- Automatic Evaluation
+- View Evaluation Status
+- Result Synchronization with Server
 
-  🔍 Bubble Detection
+The evaluator only needs to scan the OMR sheet using the mobile camera. The application automatically uploads the image for AI-based processing and displays the evaluation result.
 
-    Contour detection
-    
-    Bubble extraction
-    
-    Region segmentation
-  
-  🤖 AI Prediction
-    
-    CNN-based answer prediction
-    
-    Bubble classification
+---
 
-  📊 Result Evaluation
+## 🤖 AI-Based OMR Evaluation
 
-    Answer comparison
-    
-    Score calculation
-    
-    Output generation
+- Image Preprocessing
+- Perspective Transformation
+- Image Alignment
+- Noise Removal
+- Bubble Detection
+- Bubble Segmentation
+- CNN-Based Bubble Classification
+- Answer Prediction
+- Automatic Score Calculation
 
-🎯 Objectives
+---
 
-  Automate OMR evaluation process
-  
-  Reduce manual errors
-  
-  Improve evaluation speed
-  
-  Build an intelligent examination support system
+# 🛠️ Technologies Used
 
-🚀 Future Improvements
+## Backend
 
-  Multi-page OMR support
-  
-  Web application deployment
-  
-  Student result dashboard
-  
-  Real-time analytics
-  
-  Cloud-based evaluation system
+- Python
+- Django
+- Django REST Framework
 
-📚 Learning Outcomes
+## Mobile App
 
-  This project helped in understanding:
-  
-  Computer Vision
-  
-  Deep Learning
-  
-  Image Processing
-  
-  CNN Architecture
-  
-  OMR Evaluation Techniques
-  
-  AI-based automation systems
+- Flutter
+- Dart
 
+## Artificial Intelligence
 
-🔗 Project Status
+- TensorFlow
+- Keras
+- Convolutional Neural Network (CNN)
 
-  🚧 Ongoing Project – Currently under development
+## Computer Vision
+
+- OpenCV
+
+## Database
+
+- MySQL
+
+## Libraries
+
+- NumPy
+- Pandas
+- Matplotlib
+
+## Tools
+
+- Git
+- GitHub
+- VS Code
+- Jupyter Notebook
+
+---
+
+# 🏗️ System Architecture
+
+```
+                    Admin Web Portal
+                           │
+          Exam / Questions / Answer Keys
+                           │
+                    Django REST API
+                           │
+            MySQL Central Database
+                           │
+        ┌──────────────────┴──────────────────┐
+        │                                     │
+Flutter Evaluator App                  AI Evaluation Engine
+        │                                     │
+ Capture OMR Image              OpenCV + CNN Processing
+        │                                     │
+        └───────────────Result Generation─────┘
+```
+
+---
+
+# ⚙️ Workflow
+
+### Step 1
+
+Administrator creates an examination.
+
+↓
+
+### Step 2
+
+Questions and Answer Keys are uploaded.
+
+↓
+
+### Step 3
+
+Candidates appear for the examination using printed OMR sheets.
+
+↓
+
+### Step 4
+
+Evaluator logs into the Flutter application.
+
+↓
+
+### Step 5
+
+Evaluator scans the completed OMR sheet.
+
+↓
+
+### Step 6
+
+The scanned image is uploaded to the Django backend.
+
+↓
+
+### Step 7
+
+OpenCV preprocesses the image.
+
+- Image Enhancement
+- Thresholding
+- Perspective Correction
+- Alignment
+
+↓
+
+### Step 8
+
+Answer bubbles are extracted.
+
+↓
+
+### Step 9
+
+CNN model classifies each bubble as:
+
+- Filled
+- Empty
+- Noise
+
+↓
+
+### Step 10
+
+Predicted answers are compared with the Answer Key.
+
+↓
+
+### Step 11
+
+Marks are calculated automatically.
+
+↓
+
+### Step 12
+
+Results are stored in the MySQL database and displayed in the web application.
+
+---
+
+# 📂 Modules
+
+## 🔐 Authentication Module
+
+- Login
+- Role-based Access
+- User Management
+
+---
+
+## 🏫 Institution Module
+
+- Institution Registration
+- Employee Management
+- Evaluator Management
+
+---
+
+## 📝 Examination Module
+
+- Exam Creation
+- Question Bank
+- Answer Keys
+- Candidate Registration
+
+---
+
+## 📱 Evaluator Module
+
+- Assigned Exams
+- Mobile Login
+- Scan OMR Sheet
+- Upload Images
+- Evaluation Status
+
+---
+
+## 🤖 AI Processing Module
+
+- Image Preprocessing
+- Bubble Detection
+- CNN Prediction
+- Score Calculation
+
+---
+
+## 📊 Result Module
+
+- Automatic Evaluation
+- Result Generation
+- Reports
+- Analytics
+
+---
+
+# 🧠 AI Model
+
+The AI model was trained using a custom-created OMR dataset.
+
+Pipeline:
+
+Dataset Creation
+
+↓
+
+Image Preprocessing
+
+↓
+
+CNN Model Training
+
+↓
+
+Model Validation
+
+↓
+
+Bubble Classification
+
+↓
+
+Answer Prediction
+
+---
+
+# 📈 Project Highlights
+
+✔ Django REST Backend
+
+✔ Flutter Mobile Application
+
+✔ AI-Powered OMR Evaluation
+
+✔ CNN-Based Bubble Prediction
+
+✔ OpenCV Image Processing
+
+✔ MySQL Database
+
+✔ Automatic Result Generation
+
+✔ Centralized Examination Management
+
+✔ Mobile OMR Scanning
+
+---
+
+# 📚 Learning Outcomes
+
+Through this project I gained practical experience in:
+
+- Python Development
+- Django Backend Development
+- REST API Development
+- Flutter Mobile Development
+- OpenCV
+- Computer Vision
+- Deep Learning
+- CNN Model Development
+- TensorFlow & Keras
+- MySQL Database Design
+- Image Processing
+- Software Testing
+- Git & GitHub
+- Agile Development
+
+---
+
+# 🎓 Academic Information
+
+**Project Title**
+
+ExamAIR – AI-Based Digital OMR Examination Evaluation System
+
+**Degree**
+
+Master of Computer Applications (MCA)
+
+**University**
+
+Kannur University
+
+**Department**
+
+School of Information Science and Technology
+
+**Student**
+
+Amrutha Balan
+
+---
+
+# 🚀 Future Enhancements
+
+- QR Code-based Candidate Identification
+- Cloud Deployment (AWS)
+- AI-Based Exam Analytics Dashboard
+- Offline Evaluation Mode
+- Multi-language Support
+- Support for Different OMR Formats
+
+---
+
+# 📌 Project Status
+
+## ✅ Completed
+
+This project was successfully completed as the MCA Final Semester Major Project.
+
+It demonstrates the integration of **Artificial Intelligence, Computer Vision, Django Backend Development, Flutter Mobile Development, REST APIs, and Database Management** to build a complete AI-assisted examination evaluation platform.
+
+---
+
+## 👩‍💻 Developed By
+
+**Amrutha Balan**
+
+MCA Graduate | Python & Django Developer | AI/ML Enthusiast
+
+📧 Email: amruthabala18@gmail.com
+
+🔗 LinkedIn: https://www.linkedin.com/in/amrutha-balan-5585aa200/
+
+💻 GitHub: https://github.com/amrutha612

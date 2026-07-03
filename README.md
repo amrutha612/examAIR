@@ -121,26 +121,6 @@ The evaluator only needs to scan the OMR sheet using the mobile camera. The appl
 
 ---
 
-# 🏗️ System Architecture
-
-```
-                    Admin Web Portal
-                           │
-          Exam / Questions / Answer Keys
-                           │
-                    Django REST API
-                           │
-            MySQL Central Database
-                           │
-        ┌──────────────────┴──────────────────┐
-        │                                     │
-Flutter Evaluator App                  AI Evaluation Engine
-        │                                     │
- Capture OMR Image              OpenCV + CNN Processing
-        │                                     │
-        └───────────────Result Generation─────┘
-```
-
 ---
 
 # ⚙️ Workflow
@@ -375,18 +355,6 @@ School of Information Science and Technology
 **Student**
 
 Amrutha Balan
-
----
-
-# 🚀 Future Enhancements
-
-- QR Code-based Candidate Identification
-- Cloud Deployment (AWS)
-- AI-Based Exam Analytics Dashboard
-- Offline Evaluation Mode
-- Multi-language Support
-- Support for Different OMR Formats
-
 ---
 
 # 📌 Project Status
@@ -397,6 +365,60 @@ This project was successfully completed as the MCA Final Semester Major Project.
 
 It demonstrates the integration of **Artificial Intelligence, Computer Vision, Django Backend Development, Flutter Mobile Development, REST APIs, and Database Management** to build a complete AI-assisted examination evaluation platform.
 
+---
+# 📸 Screenshots
+
+## Admin & Employee Login
+
+![Employee Login](screenshots/admin_emply_login.png)
+
+---
+
+## Admin Dashboard
+
+![Admin Dashboard](screenshots/admin_dashboard.png)
+
+---
+
+## Exam Creation
+
+![Exam Creation](screenshots/exam_creation.jpg)
+
+---
+
+## OMR Upload
+
+![OMR Upload](screenshots/Q_A_upload.png)
+
+---
+
+## Evaluator Login
+
+![Evaluator Login](screenshots/eval_login.png)
+
+---
+
+## Assigned OMR
+
+![Assigned OMR](screenshots/assigned_omr.png)
+
+---
+
+## Scan OMR
+
+![Scan OMR](screenshots/Scan_omr.jpg)
+
+---
+
+## Evaluation Result
+
+![Evaluation Result](screenshots/evaluation_rslt.png)
+
+---
+
+## CNN Confusion Matrix
+
+![Confusion Matrix](screenshots/confusion_matrix.png)
 ---
 
 ## 👩‍💻 Developed By
